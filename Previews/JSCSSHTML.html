@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John's Resume</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: black;
+      color: #f2f2f2;
+      padding: 2rem;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      background: url('https://cdn.pixabay.com/animation/2024/08/23/21/49/21-49-21-36_512.gif') center/cover no-repeat;
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(55, 0, 255, 0.1);
+      color: #fff;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      transform: scale(0);
+      animation: bounceIn 0.9s forwards ease-out;
+      position: relative;
+      z-index: 2;
+
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0); opacity: 0; }
+      60% { transform: scale(1.2); opacity: 1; }
+      80% { transform: scale(0.95); }
+      100% { transform: scale(1); }
+    }
+
+    h1, h3 {
+      color: #00ccff;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      color: #ccc;
+    }
+
+    a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="Screenshot 2025-04-12 162729.png" alt="John's Profile Photo" width="100%" height="200">
+      <h1>Summary</h1>
+      <p>A forward-thinking Computer Science Engineering student with a passion for artificial intelligence, web development, and innovative technology...</p>
+    </div>
+
+    <div class="card">
+      <h1>Education</h1>
+      <p>Bachelor of Engineering in Computer Science<br College of Engineering.<br>Expected Graduation: 2027</p>
+      <h3>Focus Areas:</h3>
+      <ul>
+        <li>Software Development</li>
+        <li>Artificial Intelligence</li>
+        <li>Web & Mobile Technologies</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Projects</h3>
+      <ul>
+        <li>Time Calculator (Java): Converts units from milliseconds to lightyears</li>
+        <li>Android Calculator App (Java)</li>
+        <li>Note-Taking App for Android (Java)</li>
+        <li>Markdown-based Organization System using Logseq & SiYuan</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h1>Work Experience</h1>
+      <h3>Frontend Developer Intern</h3>
+      <p>TechTonic Solutions Pvt. Ltd. – Remote<br>May 2024 – July 2024</p>
+      <ul>
+        <li>Built responsive UI components using HTML, CSS, and JavaScript</li>
+        <li>Connected dynamic pages with REST APIs</li>
+        <li>Worked in a team using Git and Agile methodologies</li>
+      </ul>
+      <h3>Freelance Junior AI Contributor</h3>
+      <p>OpenCog Labs (Remote)<br>Aug 2024 – Dec 2024</p>
+      <ul>
+        <li>Supported chatbot research by scripting data tools</li>
+        <li>Analyzed and improved conversation logic</li>
+      </ul>
+      <h3>Tech Support Intern</h3>
+      <p>Mobilink Technologies<br>Jan 2023 – Mar 2023</p>
+      <ul>
+        <li>Assisted with Android ROM customizations</li>
+        <li>Wrote automation scripts for backups</li>
+        <li>Learned Android performance tuning</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h1>More Technical & Creative Projects</h1>
+      <ul>
+        <li>Blender Animation: Modeled scenes, added lighting and camera paths</li>
+        <li>AAA Game Texture Modding: Edited textures and engine handling</li>
+        <li>Phone System Tweaks: Thermal control, CPU optimization</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <a href="/Pages/about.html"><img src="About.png" alt="About" width="150" height="200"></a>
+      <a href="/Pages/contact.html"><img src="Profile.png" alt="Contact" width="150" height="200"></a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 John's</p>
+    <a href="/Pages/Card.html">Contact Me</a>
+  </footer>
+
+  <script>
+    for (let i = 0; i < 80; i++) {
+      const snow = document.createElement('div');
+      snow.className = 'snowflake';
+      snow.style.left = Math.random() * window.innerWidth + 'px';
+      snow.style.animationDuration = (Math.random() * 5 + 3) + 's';
+      snow.style.opacity = Math.random();
+      document.body.appendChild(snow);
+    }
+  </script>
+</body>
+</html>
