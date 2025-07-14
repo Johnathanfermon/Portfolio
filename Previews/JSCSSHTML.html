@@ -14,6 +14,26 @@
       overflow-x: hidden;
     }
 
+     .intro {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .intro-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .profile-pic {
+      height: 200px;
+      width: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    
     body::before {
       content: "";
       position: fixed;
@@ -96,9 +116,13 @@
 <body>
   <div class="container">
     <div class="card">
-      <img src="Screenshot 2025-04-12 162729.png" alt="John's Profile Photo" width="100%" height="200">
-      <h1>Summary</h1>
-      <p>A forward-thinking Computer Science Engineering student with a passion for artificial intelligence, web development, and innovative technology...</p>
+   <div class="intro">
+  <div class="intro-text">
+    <h1>Summary</h1>
+    <p>A forward-thinking Computer Science Engineering student with a passion for artificial intelligence, web development, and innovative technology...</p>
+  </div>
+  <img src="https://image.lexica.art/full_jpg/5dfe7eb5-7e60-47f4-9788-98bb096048ba" class="profile-pic">
+</div>
     </div>
 
     <div class="card">
